@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React,{useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import empdata from '../empdata';
 import './Loginpage.css';
@@ -17,7 +17,7 @@ function Loginpage(){
        let empDataObj=JSON.parse(empdata);
        empDataObj.map((obj)=>{
        if(obj.empName===empId){
-        if(obj.empPassword==password){
+        if(obj.empPassword===password){
           console.log("loginsuccess");
           sessionStorage.setItem("username",obj.empName);
           sessionStorage.setItem("Access",obj.empAccess);
@@ -29,6 +29,7 @@ function Loginpage(){
        }
       }
       );
+     
 
     } 
     

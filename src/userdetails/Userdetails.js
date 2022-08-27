@@ -15,12 +15,15 @@ function Userdetails(){
     }
   
 
-    return(<div>
-     <table className='table table-stripped'>
+    return(<div className='container'>
+        <div className='table-responsive'>
+     <table className='table table-striped'>
       <thead>
         <tr>
         <td>Employee name</td>
         <td>Employee ID</td>
+        <td>Employee Phone no</td>
+        <td>Employee Address</td>
        {sessionStorage.getItem("Access")==="Admin"&& <td>Employee salary</td>}    
         </tr>  
       </thead> 
@@ -28,11 +31,13 @@ function Userdetails(){
       {  empData.map((obj)=>(<tr>
             <td>{obj.empName}</td>
             <td>{obj.empId}</td>
+            <td>{obj.empPhone}</td>
+            <td>{obj.empAddress}</td>
            { sessionStorage.getItem("Access")==="Admin"&&  <td>{obj.empSalary}</td>}</tr>))
       }
       </tbody>
-
      </table>
+     </div>
     </div>);
 }
 
