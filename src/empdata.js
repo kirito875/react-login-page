@@ -1,0 +1,3 @@
+const empdata='[{"empId":123456,"empName":"walt","empPassword":"1234","empAccess":"Admin","empSalary":"500000"},{"empId":123456,"empName":"karthik","empPassword":"1234","empAccess":"user","empSalary":"500000"},{"empId":123456,"empName":"varun","empPassword":"1234","empAccess":"user","empSalary":"500000"},{"empId":123456,"empName":"vamshi","empPassword":"1234","empAccess":"Admin","empSalary":"500000"}]'
+
+export default empdata;
