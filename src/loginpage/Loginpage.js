@@ -15,8 +15,10 @@ function Loginpage(){
     }
     const submitCred=()=>{
        let empDataObj=JSON.parse(empdata);
+       let userFound=false;
        empDataObj.map((obj)=>{
        if(obj.empName===empId){
+        userFound=true;
         if(obj.empPassword===password){
           console.log("loginsuccess");
           sessionStorage.setItem("username",obj.empName);
@@ -29,6 +31,10 @@ function Loginpage(){
        }
       }
       );
+
+      if(!userFound){
+        window.alert("username not found");
+      }
      
 
     } 
